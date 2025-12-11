@@ -1,5 +1,8 @@
 provider "aws" {
   region     = "ap-northeast-2"
+  assume_role {
+    role_arn = var.role
+  }
 }
 
 resource "aws_vpc" "main_vpc" {
