@@ -6,7 +6,7 @@ provider "aws" {
 }
 
 resource "aws_vpc" "main_vpc" {
-  cidr_block           = "10.0.0.0/16" # Sentinel Policy 1 위반
+  cidr_block           = "172.0.0.0/16" # Sentinel Policy 1 위반
   enable_dns_hostnames = true
   enable_dns_support   = true
   tags = {
@@ -30,7 +30,7 @@ resource "aws_security_group" "main_sg" {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
-    cidr_blocks = ["10.0.0.0/16"]   # Sentinel Policy 2 위반
+    cidr_blocks = ["0.0.0.0/0"]   # Sentinel Policy 2 위반
   }
 
   tags = {
