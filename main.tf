@@ -1,3 +1,3 @@
 output "teest" {
-    value = "test"
+    value = "test-commit test"
 }
