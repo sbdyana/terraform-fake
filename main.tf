@@ -28,27 +28,40 @@
 # }
 
 
+#terraform {
+#   required_providers {
+#     aws = {
+#       source  = "hashicorp/aws"
+#       version = "6.73.0"
+#     }
+#     azurerm = {
+#       source  = "hashicorp/azurerm"
+#       version = "5.14.0"
+#     }
+#     azuread = {
+#       source  = "hashicorp/azuread"
+#       version = "3.10.0"
+#     }
+#     azapi = {
+#       source  = "Azure/azapi"
+#       version = "2.13.0"
+#     }
+#     tfe = {
+#       source  = "hashicorp/tfe"
+#       version = "0.84.0"
+#     }
+#   }
+# }
+
 terraform {
   required_providers {
+    ncloud = {
+      source  = "NaverCloudPlatform/ncloud"
+      version = "4.0.7"
+    }
     aws = {
       source  = "hashicorp/aws"
-      version = "6.73.0"
-    }
-    azurerm = {
-      source  = "hashicorp/azurerm"
-      version = "5.14.0"
-    }
-    azuread = {
-      source  = "hashicorp/azuread"
-      version = "3.10.0"
-    }
-    azapi = {
-      source  = "Azure/azapi"
-      version = "2.13.0"
-    }
-    tfe = {
-      source  = "hashicorp/tfe"
-      version = "0.84.0"
+      version = "6.27.0"
     }
   }
 }
@@ -56,3 +69,4 @@ terraform {
 output "mirror_test" {
   value = "provider mirror ok"
 }
+
