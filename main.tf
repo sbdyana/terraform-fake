@@ -61,12 +61,12 @@ terraform {
     }
     aws = {
       source  = "hashicorp/aws"
-      version = "6.28.0"
+      version = "6.27.0"
     }
   }
 }
 
 output "mirror_test" {
-  value = "provider mirror ok"
+  value = "provider mirror ok 222222"
 }
 
