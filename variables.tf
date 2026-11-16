@@ -1,3 +1,3 @@
-variable "role" {
-  type    = string
-}
+#variable "role" {
+#  type    = string
+#}
